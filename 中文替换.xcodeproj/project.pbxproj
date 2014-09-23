@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C5060AF419D15526005B2777 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5060AF319D15526005B2777 /* main.m */; };
+		C5060AF719D15526005B2777 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5060AF619D15526005B2777 /* AppDelegate.m */; };
+		C5060AF919D15526005B2777 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5060AF819D15526005B2777 /* Images.xcassets */; };
+		C5060AFC19D15526005B2777 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5060AFA19D15526005B2777 /* MainMenu.xib */; };
+		C5060B0819D15526005B2777 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5060B0719D15526005B2777 /* ____Tests.m */; };
+		C5060B1319D16BD1005B2777 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C5060B1219D16BD1005B2777 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C5060B1519D16C63005B2777 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C5060B1419D16C63005B2777 /* libicucore.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5060B0219D15526005B2777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5060AE619D15525005B2777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5060AED19D15526005B2777;
+			remoteInfo = "中文替换";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C5060AEE19D15526005B2777 /* 中文替换.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "中文替换.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5060AF219D15526005B2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5060AF319D15526005B2777 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C5060AF519D15526005B2777 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C5060AF619D15526005B2777 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C5060AF819D15526005B2777 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C5060AFB19D15526005B2777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C5060B0119D15526005B2777 /* 中文替换Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "中文替换Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5060B0619D15526005B2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5060B0719D15526005B2777 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		C5060B1119D16BD1005B2777 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		C5060B1219D16BD1005B2777 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		C5060B1419D16C63005B2777 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5060AEB19D15526005B2777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5060B1519D16C63005B2777 /* libicucore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5060AFE19D15526005B2777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5060AE519D15525005B2777 = {
+			isa = PBXGroup;
+			children = (
+				C5060B1419D16C63005B2777 /* libicucore.dylib */,
+				C5060AF019D15526005B2777 /* 中文替换 */,
+				C5060B0419D15526005B2777 /* 中文替换Tests */,
+				C5060AEF19D15526005B2777 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5060AEF19D15526005B2777 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5060AEE19D15526005B2777 /* 中文替换.app */,
+				C5060B0119D15526005B2777 /* 中文替换Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5060AF019D15526005B2777 /* 中文替换 */ = {
+			isa = PBXGroup;
+			children = (
+				C5060B1119D16BD1005B2777 /* RegexKitLite.h */,
+				C5060B1219D16BD1005B2777 /* RegexKitLite.m */,
+				C5060AF519D15526005B2777 /* AppDelegate.h */,
+				C5060AF619D15526005B2777 /* AppDelegate.m */,
+				C5060AF819D15526005B2777 /* Images.xcassets */,
+				C5060AFA19D15526005B2777 /* MainMenu.xib */,
+				C5060AF119D15526005B2777 /* Supporting Files */,
+			);
+			path = "中文替换";
+			sourceTree = "<group>";
+		};
+		C5060AF119D15526005B2777 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5060AF219D15526005B2777 /* Info.plist */,
+				C5060AF319D15526005B2777 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5060B0419D15526005B2777 /* 中文替换Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C5060B0719D15526005B2777 /* ____Tests.m */,
+				C5060B0519D15526005B2777 /* Supporting Files */,
+			);
+			path = "中文替换Tests";
+			sourceTree = "<group>";
+		};
+		C5060B0519D15526005B2777 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5060B0619D15526005B2777 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5060AED19D15526005B2777 /* 中文替换 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5060B0B19D15526005B2777 /* Build configuration list for PBXNativeTarget "中文替换" */;
+			buildPhases = (
+				C5060AEA19D15526005B2777 /* Sources */,
+				C5060AEB19D15526005B2777 /* Frameworks */,
+				C5060AEC19D15526005B2777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "中文替换";
+			productName = "中文替换";
+			productReference = C5060AEE19D15526005B2777 /* 中文替换.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5060B0019D15526005B2777 /* 中文替换Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5060B0E19D15526005B2777 /* Build configuration list for PBXNativeTarget "中文替换Tests" */;
+			buildPhases = (
+				C5060AFD19D15526005B2777 /* Sources */,
+				C5060AFE19D15526005B2777 /* Frameworks */,
+				C5060AFF19D15526005B2777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5060B0319D15526005B2777 /* PBXTargetDependency */,
+			);
+			name = "中文替换Tests";
+			productName = "中文替换Tests";
+			productReference = C5060B0119D15526005B2777 /* 中文替换Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5060AE619D15525005B2777 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = LJH;
+				TargetAttributes = {
+					C5060AED19D15526005B2777 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					C5060B0019D15526005B2777 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = C5060AED19D15526005B2777;
+					};
+				};
+			};
+			buildConfigurationList = C5060AE919D15525005B2777 /* Build configuration list for PBXProject "中文替换" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5060AE519D15525005B2777;
+			productRefGroup = C5060AEF19D15526005B2777 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5060AED19D15526005B2777 /* 中文替换 */,
+				C5060B0019D15526005B2777 /* 中文替换Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5060AEC19D15526005B2777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5060AF919D15526005B2777 /* Images.xcassets in Resources */,
+				C5060AFC19D15526005B2777 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5060AFF19D15526005B2777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5060AEA19D15526005B2777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5060B1319D16BD1005B2777 /* RegexKitLite.m in Sources */,
+				C5060AF719D15526005B2777 /* AppDelegate.m in Sources */,
+				C5060AF419D15526005B2777 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5060AFD19D15526005B2777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5060B0819D15526005B2777 /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5060B0319D15526005B2777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5060AED19D15526005B2777 /* 中文替换 */;
+			targetProxy = C5060B0219D15526005B2777 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5060AFA19D15526005B2777 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5060AFB19D15526005B2777 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5060B0919D15526005B2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C5060B0A19D15526005B2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C5060B0C19D15526005B2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "中文替换/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5060B0D19D15526005B2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "中文替换/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C5060B0F19D15526005B2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "中文替换Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/中文替换.app/Contents/MacOS/中文替换";
+			};
+			name = Debug;
+		};
+		C5060B1019D15526005B2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "中文替换Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/中文替换.app/Contents/MacOS/中文替换";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5060AE919D15525005B2777 /* Build configuration list for PBXProject "中文替换" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5060B0919D15526005B2777 /* Debug */,
+				C5060B0A19D15526005B2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5060B0B19D15526005B2777 /* Build configuration list for PBXNativeTarget "中文替换" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5060B0C19D15526005B2777 /* Debug */,
+				C5060B0D19D15526005B2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5060B0E19D15526005B2777 /* Build configuration list for PBXNativeTarget "中文替换Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5060B0F19D15526005B2777 /* Debug */,
+				C5060B1019D15526005B2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5060AE619D15525005B2777 /* Project object */;
+}
