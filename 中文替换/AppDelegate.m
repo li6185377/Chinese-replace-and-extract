@@ -76,9 +76,11 @@
             continue;
         }
         
+        location = (int)range.location - 7;
         NSString* checkStr = [fileContent substringWithRange:NSMakeRange(location, 7)];
         if([checkStr isEqualToString:@"SY_STR("])
         {
+            subStr = [subStr substringWithRange:NSMakeRange(2, subStr.length - 3)];
             [_dic setObject:subStr forKey:subStr];
             continue;
         }
