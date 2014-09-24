@@ -55,7 +55,7 @@
         if(location >= 0)
         {
             NSString* qq = [fileContent substringWithRange:NSMakeRange(location, 6)];
-            if([qq isEqualToString:@"NSLog("] || [qq isEqualToString:@"Y_STR("])
+            if([qq isEqualToString:@"NSLog("])
             {
                 continue;
             }
@@ -73,6 +73,13 @@
         }
         if(zhongwen == NO)
         {
+            continue;
+        }
+        
+        NSString* checkStr = [fileContent substringWithRange:NSMakeRange(location, 7)];
+        if([checkStr isEqualToString:@"SY_STR("])
+        {
+            [_dic setObject:subStr forKey:subStr];
             continue;
         }
         
