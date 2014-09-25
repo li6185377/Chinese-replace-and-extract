@@ -34,13 +34,53 @@
         {
             [self replaceFileWithPath:newPath];
         }
+        else if([newPath.pathExtension isEqualToString:@"json"])
+        {
+            [self replaceFileWithJSONPath:newPath];
+        }
     }
+}
+-(void)replaceFileWithJSONPath:(NSString*)path
+{
+    NSMutableString* fileContent = [NSMutableString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    if(fileContent.length == 0)
+    {
+        return;
+    }
+    NSString *regularStr = @"\"(?:(\\\\\"|[^\"]|[\\r\\n]))*\"";
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:regularStr options:NSRegularExpressionAllowCommentsAndWhitespace error:nil];
+    NSArray* matches = [regex matchesInString:fileContent.lowercaseString options:0 range:NSMakeRange(0, fileContent.length)];
+    for (NSTextCheckingResult *match in matches)
+    {
+        NSRange range = [match range];
+        NSString* subStr = [fileContent substringWithRange:range];
+        
+        BOOL zhongwen = NO;
+        for(int i=0; i< subStr.length;i++){
+            int a = [subStr characterAtIndex:i];
+            if( a > 0x4e00 && a < 0x9fff)
+            {
+                zhongwen = YES;
+            }
+        }
+        if(zhongwen == NO)
+        {
+            continue;
+        }
+        
+        subStr = [subStr substringWithRange:NSMakeRange(1, subStr.length - 2)];
+        [_dic setObject:subStr forKey:subStr];
+    }
+    NSLog(@"%@ ok \n",path);
 }
 
 -(void)replaceFileWithPath:(NSString*)path
 {
     NSMutableString* fileContent = [NSMutableString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    
+    if(fileContent.length == 0)
+    {
+        return;
+    }
     int offset = 0;
     NSString *regularStr = @"@\"(?:(\\\\\"|[^\"]|[\\r\\n]))*\"";
     NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:regularStr options:NSRegularExpressionAllowCommentsAndWhitespace error:nil];
@@ -104,6 +144,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+//    [self pingjieJianTiPath:@"/Users/linyunfeng/Documents/code_git/work4/jianti.strings" fantiPath:@"/Users/linyunfeng/Documents/code_git/work4/fanti.strings"];
+    
+    [self tiquZhongWen];
+}
+
+-(void)tiquZhongWen
+{
     self.dic = [NSMutableDictionary dictionary];
     ///目錄
     NSString* dirPath = @"/Users/linyunfeng/Documents/code_git/work4/iPhone/Meetyou_iPhone/Seeyou/";
@@ -111,13 +158,42 @@
     
     
     NSMutableString* sb = [NSMutableString string];
-    [_dic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [sb appendFormat:@"\"%@\" = \"%@\";\n",key,obj];
+    [_dic enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSString* obj, BOOL *stop) {
+        NSString* jjj = [key stringByReplacingOccurrencesOfString:@"\n" withString:@"\\n"];
+        NSString* bbb = [obj stringByReplacingOccurrencesOfString:@"\n" withString:@"\\n"];
+        [sb appendFormat:@"\"%@\" = \"%@\";\n",jjj,bbb];
     }];
     
     [sb writeToFile:[dirPath stringByAppendingPathComponent:@"local.strings"] atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
+- (void)pingjieJianTiPath:(NSString*)jianPath fantiPath:(NSString*)fanPath
+{
+    NSString* jiantiContent = [NSString stringWithContentsOfFile:jianPath encoding:NSUTF8StringEncoding error:nil];
+    NSArray* jianArray = [jiantiContent componentsSeparatedByString:@"\n"];
+    
+    NSString* fantiContent = [NSString stringWithContentsOfFile:fanPath encoding:NSUTF8StringEncoding error:nil];
+    NSArray* fanArray = [fantiContent componentsSeparatedByString:@"\n"];
+    
+    if(jianArray.count != fanArray.count)
+    {
+        return;
+    }
+    
+    NSMutableString* sb = [NSMutableString string];
+    for (int i = 0; i< jianArray.count; i++)
+    {
+        NSString* jjj = [jianArray objectAtIndex:i];
+        NSString* fff = [fanArray objectAtIndex:i];
+        if([jjj stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length == 0)
+        {
+            continue;
+        }
+        [sb appendFormat:@"%@ = %@;\n",jjj,fff];
+    }
+    
+    [sb writeToFile:[jianPath.stringByDeletingLastPathComponent stringByAppendingPathComponent:@"local2.strings"] atomically:YES encoding:NSUTF8StringEncoding error:nil];
+}
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
